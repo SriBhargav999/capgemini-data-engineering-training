@@ -44,7 +44,7 @@ Codes:
   cus_amount.show()
 
 6. Customers with more than one order
-  cus_amount= customers.join(orders, on="customer_id").groupBy(customers["customer_name"]).agg(count(orders["order_id"]).alias("total_amount"))
+  cus_amount= customers.join(orders, on="customer_id").groupBy(customers["customer_name"]).agg(count(orders["order_id"]).alias("total_orders")).filter(col("total_orders")>1)
   cus_amount.show()
 
 7. Sort customers by total spend descending
