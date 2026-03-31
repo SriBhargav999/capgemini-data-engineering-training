@@ -9,7 +9,8 @@ INSERT INTO customers VALUES
 (2, 'Sita', 'Chennai', 32),
 (3, 'Arun', 'Hyderabad', 28);
 
-Queries:
+-- Implemention of sql queries
+
 1. Show all customers
   SELECT *
   FROM customers
