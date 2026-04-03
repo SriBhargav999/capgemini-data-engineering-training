@@ -66,3 +66,7 @@ final=customers.join(sales,"customer_id")\
   .when((col("total_spend") >= 5000) & (col("total_spend") <= 10000), "Silver")\
   .otherwise("Bronze"))
 display(final)
+
+
+#Task 7: Save Output
+final.write.mode('overwrite').option("header",True).csv('/samples/output/report')
